@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+}
+
+.container{
+   max-width: 600px;
+   margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.js-instruction{
+    text-align: center;
+}
+
+#js-form{
+    text-align: center;
+}
+
+
+.error-message{
+    color: red;
+}
+
+.hidden{
+    display: none;
+}
+
+#start-container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#js-start{
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpot" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container hidden">
+        <h1>Taste Finder</h1>
+            <p class="js-instruction"></p>
+        <form id="js-form">
+            <label for="search-term"></label>
+            <input type="text" id="js-search-term" name="search-term">
+            <button type='submit' name= 'js-submit' id='js-submit'>GO!</button>
+        </form>
+        <p id="js-error" class="error-message"></p>
+        <section id="js-results" class="hidden">
+            <ul id="js-results-list">
+
+            </ul>
+        </section>
+    </div>
+    <div id='start-container'>
+            <section id="js-start">
+                <h1>Explore Your Taste</h1>
+                    <h3>Please Select One To Begin</h3>
+                <input type='button' value="Book" id="book">
+                <input type='button' value="Movie" id="movie">
+                <input type='button' value="Music" id="music">
+            </section>
+        </div>
+    <script src="index.js"></script>
+</body>
+    
+</html>
