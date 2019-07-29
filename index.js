@@ -36,6 +36,7 @@ function getResults(query,media){
     const options = {
         headers: new Headers({
             "Access-Control-Allow-Origin": '*',
+            "mode": 'cors'
             })
                               
     };
