@@ -11,7 +11,8 @@ const tasteDiveBaseUrl='https://tastedive.com/api/similar';
 function displayTasteDiveResults(responseJson){
     console.log('This is my tasteDive json object',responseJson);
     $('#js-results-list1').empty();
-    $('#js-results-list1').append(`<h2>RECOMMENDATION</h2><li><p>You might like 
+    $('#js-results-list1').append(`<h2>RECOMMENDATION</h2><li><p>If you liked the ${responseJson.Similar.Info[0].Type}
+     ${responseJson.Similar.Info[0].Name}...</p><p>You might like 
      ${responseJson.Similar.Results[0].Name}</p><h3>Description</h2><p>${responseJson.Similar.Results[0].wTeaser}
      </p><p><a href="${responseJson.Similar.Results[0].wUrl}"><h3>Wiki</h3></a></p></li>`);
     $('#js-results1').removeClass('hidden');              
