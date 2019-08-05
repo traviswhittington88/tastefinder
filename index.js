@@ -150,7 +150,7 @@ function setPlaceholder(mediaType){
             $("#js-search-term").attr('placeholder', 'Enter A Favorite Book');
         }
         else if(mediaType==="NULL"){
-           $("#js-search-term").attr('placeholder', 'Enter anything to return various results');
+           $("#js-search-term").attr('placeholder', 'Enter a book,author,band,or movie to return randomized results');
         }
         else if(mediaType ==='authors'){
             $('#js-search-term').attr('placeholder','How bout your favorite author?');
