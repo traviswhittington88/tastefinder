@@ -4,14 +4,97 @@
 
 body{
     font-family: 'Roboto',sans-serif;
+    margin: 0 auto;
+    background-color: grey;
+    
 }
 
-ul{
-    list-style: none;
+
+
+#start-container{
+  margin: 0 auto;
+  width: 90%;
 }
+
+section {
+  width: 100%;
+
+}
+
+ul {
+  list-style: none;
+}
+
+ul.searchBar{
+    display: flex;
+    padding: 0;
+    background-color: #333;
+    margin-bottom: 0;
+    height: 70px;
+}
+
+#js-form{
+  display: flex;
+}
+
+input{
+  font-size: 28px;
+  width: 70%;
+  padding: 20px;
+  margin: 0;
+  height: 80px;
+  border: none;
+  
+}
+
+#submitButton{
+  height: 80px;
+  width: 30%;
+  color: white;
+  background-color: turquoise;
+
+}
+
+#submitButton:hover {
+        background-color: rgb(54, 167, 155);
+    }
+
+.tabs{
+  width: 20%;
+  margin-left: 0;
+}
+
+
+
+input[type="button"]{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+
+ input[type="button"]:hover,:focus{
+  background-color: white;
+}
+
+.unselect{
+  background-color: rgb(221,221,221);
+}
+
+.select{
+  background-color: white;
+}
+
+input[type="button"]:active{
+  background-color: blue;
+}
+
+
 
 .container{
-   max-width: 600px;
+   max-width: 90%;
    margin: 0 auto;
 }
 
@@ -36,11 +119,31 @@ h1{
     display: none;
 }
 
-#start-container{
-    max-width: 600px;
+#js-resultsContainer{
+    
     margin: 0 auto;
+    width:90%;
 }
+
 
 #js-start{
     text-align: center;
+}
+
+
+.videowrapper{
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0px;
+}
+
+.videowrapper iframe{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top:0px;
+  bottom:0px;
+  width: 100%;
+  height: 100%;
 }

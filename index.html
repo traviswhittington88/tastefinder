@@ -4,42 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewpot" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container hidden">
-        <h1>Taste Finder</h1>
-            <p class="js-instruction"></p>
-        <form id="js-form">
-            <label for="search-term"></label>
-            <input type="text" id="js-search-term" name="search-term">
-            <button type='submit' name= 'js-submit' id='js-submit'>GO!</button>
-        </form>
-        <p id="js-error" class="error-message"></p>
-        <section id="js-results1" class="hidden">
-            <ul id="js-results-list1">
-
-            </ul>
-        </section>
-        <section id="js-results2" class="hidden">
-                <ul id="js-results-list2">
-    
-                </ul>
-            </section>
-    </div>
     <div id='start-container'>
             <section id="js-start">
-                <h1>Explore Your Taste</h1>
-                    <h3>Please Select One To Begin</h3>
-                <input type='button' value="Book" id="book">
-                <input type='button' value="Movie" id="movie">
-                <input type='button' value="Music" id="music">
+                <h2>Explore Your Taste</h2>
+                <h3>With</h3>
+                <h1>TasteFinder</h1>
+                <nav>
+                  <ul class="searchBar">
+                    <li class="tabs"><input type="button" class="js-tab select" id="NULL"  value="Anything"></li>
+                    <li class="tabs"><input type="button" id="books" class="js-tab" value="Books"></li>
+                    <li class="tabs"><input type="button" id="authors" value="Authors" class="js-tab"></li>
+                    <li class="tabs"><input type="button" class="js-tab"id="movies"value="Movies"></li>
+                    <li class="tabs"><input type="button" class="js-tab" id="music"value="Music"></li>
+                </ul>
+              </nav>
+              <form id="js-form">
+                 <input type="search" id="js-search-term"placeholder="Select a tab and enter your search to begin!">
+                 <button type="submit" id="submitButton">Recommend</button>
+              </form>
             </section>
-        </div>
+    </div>
+    <div id="js-resultsContainer">
+            <p id="js-error" class="error-message"></p>
+            <section id="js-results1" class="hidden">
+            <ul id="js-results-list1"></ul>
+            </section>
+  
+            <section id="js-results2" class="hidden">
+                <ul id="js-results-list2"></ul>
+            </section> 
+    </div>
     <script src="index.js"></script>
 </body>
     
