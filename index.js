@@ -63,12 +63,22 @@ function getYoutubeResults(query, maxResults=3){
 function displayTasteDiveResults(responseJson){
   console.log('display results ran');
     console.log('this is the tastedive object',responseJson);
-    let recommendation = responseJson.Similar.Results[0].Name;
+    let recommendation = `${mediaType} ${responseJson.Similar.Results[0].Name}`;
     getYoutubeResults(recommendation);
 
     $('#js-results-list1').empty();
 
-    if(responseJson.Similar.Results[0].Type ==='music'){
+    if(responseJson.Similar.Results[0].Type ==='book'){
+      $('#js-results-list1').append(`<li><h2>RECOMMENDATION</h2><p>If you like ${responseJson.Similar.Info[0].Name}...</p><p>You might like the book ${responseJson.Similar.Results[0].Name}.</p><h3>Description</h2><p>${responseJson.Similar.Results[0].wTeaser}</p><p><a href="${responseJson.Similar.Results[0].wUrl}"><h3>Wiki</h3></a></p></li>`);
+    $('#js-results1').removeClass('hidden');              
+    }
+
+    else if(responseJson.Similar.Results[0].Type ==='author'){
+      $('#js-results-list1').append(`<li><h2>RECOMMENDATION</h2><p>If you like ${responseJson.Similar.Info[0].Name}...</p><p>You might like the author ${responseJson.Similar.Results[0].Name}.</p><h3>Description</h2><p>${responseJson.Similar.Results[0].wTeaser}</p><p><a href="${responseJson.Similar.Results[0].wUrl}"><h3>Wiki</h3></a></p></li>`);
+    $('#js-results1').removeClass('hidden');              
+    }
+
+    else if(responseJson.Similar.Results[0].Type ==='music'){
       $('#js-results-list1').append(`<li><h2>RECOMMENDATION</h2><p>If you like ${responseJson.Similar.Info[0].Name}...</p><p>You might like the music of ${responseJson.Similar.Results[0].Name}.</p><h3>Description</h2><p>${responseJson.Similar.Results[0].wTeaser}</p><p><a href="${responseJson.Similar.Results[0].wUrl}"><h3>Wiki</h3></a></p></li>`);
     $('#js-results1').removeClass('hidden');              
     }
@@ -139,6 +149,7 @@ function watchForm(){
         $('#js-error').addClass('hidden');
         const searchTerm= $('#js-search-term').val();
         console.log(searchTerm);
+        console.log(mediaType);
         getTasteDiveResults(searchTerm,mediaType);
     })
 }
@@ -150,7 +161,7 @@ function setPlaceholder(mediaType){
             $("#js-search-term").attr('placeholder', 'Enter A Favorite Book');
         }
         else if(mediaType==="NULL"){
-           $("#js-search-term").attr('placeholder', 'Enter anything to return various results');
+           $("#js-search-term").attr('placeholder', 'Enter a book, author, movie or band to get started!');
         }
         else if(mediaType ==='authors'){
             $('#js-search-term').attr('placeholder','How bout your favorite author?');

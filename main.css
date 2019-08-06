@@ -3,13 +3,17 @@
 }
 
 body{
-    font-family: 'Roboto',sans-serif;
+    /*font-family: 'Roboto',sans-serif;*/
+    font-family: 'Oswald',sans-serif;
     margin: 0 auto;
     background-color: grey;
     
 }
 
-
+.tastefinder{
+  font-family: 'Lobster', cursive;
+  font-size: 28px;
+}
 
 #start-container{
   margin: 0 auto;
@@ -21,17 +25,28 @@ section {
 
 }
 
+
 ul {
   list-style: none;
+
 }
 
 ul.searchBar{
     display: flex;
     padding: 0;
-    background-color: #333;
     margin-bottom: 0;
     height: 70px;
+
 }
+
+.round-left{
+  border-radius: 10px 0px 0px 0px;
+}
+
+.round-right{
+  border-radius: 0px 10px 0px 0px;
+}
+
 
 #js-form{
   display: flex;
@@ -51,13 +66,18 @@ input{
   height: 80px;
   width: 30%;
   color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
   background-color: turquoise;
+
 
 }
 
 #submitButton:hover {
-        background-color: rgb(54, 167, 155);
-    }
+   background-color: rgb(54, 167, 155);
+   transition: background-color .5s linear;
+}
 
 .tabs{
   width: 20%;
@@ -77,21 +97,22 @@ input[type="button"]{
 
  input[type="button"]:hover,:focus{
   background-color: white;
+  transition: background-color .75s linear;
 }
 
 .unselect{
   background-color: rgb(221,221,221);
+  transition: background-color .5s linear;
 }
 
 .select{
   background-color: white;
+
 }
 
-input[type="button"]:active{
-  background-color: blue;
+.js-tab{
+  font-family: 'Oswald', sans-serif;
 }
-
-
 
 .container{
    max-width: 90%;
