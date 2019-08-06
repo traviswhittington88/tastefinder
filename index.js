@@ -183,7 +183,7 @@ function getMediaType(){
         $(selectorString).css({backgroundColor:'grey'});
         $(event.currentTarget).css({backgroundColor:'yellow'});*/
         $(event.currentTarget).toggleClass("select");
-        $('.js-tab').not(event.currentTarget).removeClass('select');
+        $('.js-tab').not(event.currentTarget).removeClass('select').addClass('unselect');
        /* $(".js-tab").not(event.CurrentTarget).toggleClass("unselect");*/
         mediaType= event.currentTarget.id;
         setPlaceholder(mediaType);
