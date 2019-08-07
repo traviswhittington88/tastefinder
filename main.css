@@ -15,10 +15,18 @@ body{
   font-size: 28px;
 }
 
+
+.logo{
+  display:inline-block;
+}
+
+
 #start-container{
   margin: 0 auto;
   width: 90%;
 }
+
+
 
 section {
   width: 100%;
