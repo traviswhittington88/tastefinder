@@ -153,6 +153,7 @@ function watchForm(){
         const searchTerm= $('#js-search-term').val();
         console.log(searchTerm);
         console.log(mediaType);
+        $("form").trigger("reset");
         getTasteDiveResults(searchTerm,mediaType);
     })
 }
