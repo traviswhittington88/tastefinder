@@ -10,6 +10,46 @@ body{
     
 }
 
+.loader{     /*shout-out to Traversy Media for the tutorial on this loader image*/
+  opacity: 0;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  margin: 100px auto 0 auto;
+  transform-origin: bottom center;
+  animation: rotate 3s linear infinite;
+}
+
+.circle{
+  background-color: turquoise;
+  display: inline-block;
+  height: 40px;
+  width: 40px; 
+  border-radius: 50%;
+  animation: grow 1.5s linear infinite;
+  transform: scale(0);
+  margin: -10px;
+}
+
+.circle:nth-child(2){
+  background-color: pink;
+  animation-delay: 0.75s;
+  }
+
+@keyframes rotate {
+  to{
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes grow{
+  50% {
+    transform: scale(1);
+  }
+}
+
+
 .tastefinder{
   font-family: 'Lobster', cursive;
   font-size: 28px;

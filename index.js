@@ -2,7 +2,7 @@
 let response;
 let mediaType = 'NULL';
 const herokuUrl = 'https://cors-anywhere.herokuapp.com/'
-const youtubeApiKey = 'AIzaSyAIZy1A-yntbrNRZAh31hjzL7Xy5tzZ5z4';
+const youtubeApiKey = 'AIzaSyC92Yc2MSvPnEN6stQHxhSzIWB8QqIsv5o';
 const tasteDiveApiKey = '341376-TasteFin-9HSMVD5G';
 const youtubeBaseUrl='https://www.googleapis.com/youtube/v3/search';
 const tasteDiveBaseUrl='https://tastedive.com/api/similar';
@@ -11,6 +11,7 @@ const tasteDiveBaseUrl='https://tastedive.com/api/similar';
 
 
 function displayYoutubeResults(responseJson){
+    complete();
     console.log('This is my youtube Api json object',responseJson);
     $('#js-results-list2').empty();
     $('#js-results-list2').append(`<h2>Video</h2>`);
@@ -34,17 +35,18 @@ function youtubeApiFetch(url,options){
         if(response.ok) {
         return response.json();
         }
+        complete();
         throw new Error(response.statusText);        
     })
     .then(responseJson => displayYoutubeResults(responseJson))
-    .catch(err => {
+    .catch(err => { 
         $('#js-error').removeClass('hidden').text(`Something went wrong: ${err.message}`);
     });
 }
 
 
 function getYoutubeResults(query, maxResults=3){
-
+   
     const youtubeParams = {
         key: youtubeApiKey,
         q: query,
@@ -52,7 +54,7 @@ function getYoutubeResults(query, maxResults=3){
         maxResults,
         type: 'video'
     };
-
+    
     const queryString = formatQueryParams(youtubeParams);
     const youtubeUrl = youtubeBaseUrl + '?' + queryString;
     console.log(youtubeUrl);
@@ -92,13 +94,14 @@ function displayTasteDiveResults(responseJson){
 
 function tasteDiveApiFetch(url,options){
   console.log('fetch ran');
+    load();
     fetch(url,options)
     .then(response => {
         if(response.ok) {
         return response.json();
         
         }
-        throw new Error(response.statusText);        
+        throw new Error(response.statusText);       
     })
     .then(responseJson => displayTasteDiveResults(responseJson))
     .catch(err => {
@@ -189,6 +192,23 @@ function getMediaType(){
         setPlaceholder(mediaType);
   })
 }
+
+function load(){
+    const loader = $('.loader');
+    /*const main = $(".main");*/
+    /*setTimeout(() => { */
+        loader.css('opacity','1');
+        loader.removeClass('hidden');
+    /*}, 4000);*/
+}
+
+function complete(){
+    const loader = $('.loader');
+    loader.css('opacity','0')
+    loader.addClass('hidden');
+}
+
+
 
   function startApp(){
     getMediaType();
