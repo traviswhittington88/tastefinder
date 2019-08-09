@@ -204,7 +204,7 @@ function complete(){
 }
 
 function scroll(){
-    $('.scrollToTop').click(function(){
+    $('.scrollWrapper').click(function(){
         $('html,body').animate({scrollTop: 0},1000);
     })
 }

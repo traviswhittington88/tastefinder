@@ -23,17 +23,21 @@ body{
   position: absolute;
   z-index: 99;
   left: 50%;
-  margin-left: -22.5px;
-  width: 45px;
-  height: 45px;
+  margin-left: -35px;
+  width: 70px;
+  height: 70px;
   top: 50%;
-  margin-top: -22.5px;
+  margin-top: -35px;
   line-height: 40px;
   text-align: center;
   color: white;
   background-color: turquoise;
 }
 
+.fa.fa-arrow-up{
+  position: relative;
+  top: 22.5%;
+}
 .scrollToTop:hover {
   background-color: #555; /* Add a dark-grey background on hover */
   transition: background-color .5s linear;
