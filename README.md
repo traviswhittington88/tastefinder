@@ -4,6 +4,7 @@
 ### Screenshots 
 
 
+
 ### Summary 
 
 Taste Finder is a fun and useful application that integrates the Tastedive and Youtube APIs to present recommendation information in a new and exciting way. The dark grey background was chosen intentionally to highlight the more eye-popping art and colorfol neons that appear on the page, without being two overwhelming on the eyes. The ice-cream cone logo is 100% original and was designed by my uncle Daniel Packard, who is an amazing artist. He really brought the application together with this final touch. 
