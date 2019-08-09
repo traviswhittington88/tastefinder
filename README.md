@@ -7,6 +7,14 @@
 
 ![home page for taste finder app](screenshots/TasteFinderHomeScreen.jpg.png?raw=true "Home Screen")
 
+### Results Screen
+
+![Results screen for taste finder app](screenshots/TasteFinderOutput.jpg.png?raw=true "Results Screen")
+
+### TasteFinder in its infancy
+
+![early tastefinder app](screenshots/TasteFinderInfant.jpg.png?raw=true "Early TasteFinder")
+
 
 ## Summary 
 
