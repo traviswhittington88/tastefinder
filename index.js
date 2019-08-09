@@ -23,6 +23,7 @@ function displayYoutubeResults(responseJson){
     };
 
     $('#js-results2').removeClass('hidden');
+    $('.scrollWrapper').removeClass('hidden');
 }
 
 
@@ -202,9 +203,14 @@ function complete(){
     loader.addClass('hidden');
 }
 
-
+function scroll(){
+    $('.scrollToTop').click(function(){
+        $('html,body').animate({scrollTop: 0},1000);
+    })
+}
 
   function startApp(){
+    scroll();
     getMediaType();
     watchForm();
   }

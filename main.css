@@ -10,6 +10,38 @@ body{
     
 }
 
+
+.scrollWrapper{
+  padding: 25px;
+  margin: 50px;
+  position: relative;
+}
+
+
+.scrollToTop{
+  border-radius: 50%;
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  margin-left: -22.5px;
+  width: 45px;
+  height: 45px;
+  top: 50%;
+  margin-top: -22.5px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  background-color: turquoise;
+}
+
+.scrollToTop:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.scrollToTop:focus {
+  background-color: pink; /* Add a dark-grey background on hover */
+}
+
 .loader{     /*shout-out to Traversy Media for the tutorial on this loader image*/
   opacity: 0;
   height: 50px;
