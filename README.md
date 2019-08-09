@@ -5,7 +5,7 @@
 
 ### Landing Page
 
-![home page for taste finder app](tastefinder/screenshots/TasteFinderHomeScreen.jpg.png?raw=true "Home Screen")
+![home page for taste finder app](screenshots/TasteFinderHomeScreen.jpg.png?raw=true "Home Screen")
 
 
 ## Summary 
