@@ -1,5 +1,4 @@
 
-let response;
 let mediaType = 'NULL';
 const herokuUrl = 'https://cors-anywhere.herokuapp.com/'
 const youtubeApiKey = 'AIzaSyC92Yc2MSvPnEN6stQHxhSzIWB8QqIsv5o';
@@ -22,7 +21,7 @@ function displayYoutubeResults(responseJson){
         <p>${responseJson.items[i].snippet.description}</p><div class="videowrapper"><iframe src="https://www.youtube.com/embed/${responseJson.items[i].id.videoId}?rel=0" frameborder="0" allowfullscreen></iframe></div>
         </li>`)
     };
-/*<img src='${responseJson.items[i].snippet.thumbnails.default.url}'>*/
+
     $('#js-results2').removeClass('hidden');
 }
 
@@ -182,13 +181,8 @@ function setPlaceholder(mediaType){
 function getMediaType(){
   console.log(`loading getMediaType`);
   $("#js-start").on('click','input[type="button"]',function(event){
-        /*let selectorString = `#${mediaType}`
-        console.log(selectorString);
-        $(selectorString).css({backgroundColor:'grey'});
-        $(event.currentTarget).css({backgroundColor:'yellow'});*/
         $(event.currentTarget).toggleClass("select");
         $('.js-tab').not(event.currentTarget).removeClass('select').addClass('unselect');
-       /* $(".js-tab").not(event.CurrentTarget).toggleClass("unselect");*/
         mediaType= event.currentTarget.id;
         setPlaceholder(mediaType);
   })
@@ -196,11 +190,10 @@ function getMediaType(){
 
 function load(){
     const loader = $('.loader');
-    /*const main = $(".main");*/
-    /*setTimeout(() => { */
+  
         loader.css('opacity','1');
         loader.removeClass('hidden');
-    /*}, 4000);*/
+
 }
 
 function complete(){
