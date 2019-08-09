@@ -8,7 +8,7 @@ const tasteDiveBaseUrl = 'https://tastedive.com/api/similar';
 
 function displayYoutubeResults(responseJson) {
   complete();
-  console.log('This is my youtube Api json object',responseJson);
+  console.log('This is my youtube Api json object', responseJson);
   
   $('#js-results-list2').empty();
   $('#js-results-list2').append(`<h2>Video</h2>`);
@@ -26,8 +26,8 @@ function displayYoutubeResults(responseJson) {
   $('.scrollWrapper').removeClass('hidden');
 }
 
-function youtubeApiFetch(url,options) {
-  fetch(url,options)
+function youtubeApiFetch(url, options) {
+  fetch(url, options)
     .then(response => {
       if(response.ok) {
         return response.json();
@@ -59,7 +59,7 @@ function getYoutubeResults(query, maxResults=3) {
 
 function displayTasteDiveResults(responseJson) {
   console.log('display results ran');
-  console.log('this is the tastedive object',responseJson);
+  console.log('this is the tastedive object', responseJson);
     
   let recommendation = `${ mediaType } ${ responseJson.Similar.Results[0].Name }`;
   getYoutubeResults(recommendation);
@@ -75,27 +75,33 @@ function displayTasteDiveResults(responseJson) {
   }
 
   else if (responseJson.Similar.Results[0].Type === 'author') {
-    $('#js-results-list1').append(`<li><h2>RECOMMENDATION</h2><p>If you like ${ responseJson.Similar.Info[0].Name }...</p><p>You might like the author ${ responseJson.Similar.Results[0].Name }.</p><h3>Description</h2><p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }"><h3>Wiki</h3></a></p></li>`);
+    $('#js-results-list1').append(`<li><h2>RECOMMENDATION</h2><p>If you like ${ responseJson.Similar.Info[0].Name }...</p>
+     <p>You might like the author ${ responseJson.Similar.Results[0].Name }.</p><h3>Description</h2>
+     <p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }">
+     <h3>Wiki</h3></a></p></li>`);
     $('#js-results1').removeClass('hidden');              
   }
 
   else if (responseJson.Similar.Results[0].Type === 'music') {
-    $('#js-results-list1').append(`<li><h2>RECOMMENDATION</h2><p>If you like ${ responseJson.Similar.Info[0].Name }...</p><p>You might like the music of ${ responseJson.Similar.Results[0].Name }.</p><h3>Description</h2><p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }"><h3>Wiki</h3></a></p></li>`);
+    $('#js-results-list1').append(`<li><h2>RECOMMENDATION</h2><p>If you like ${ responseJson.Similar.Info[0].Name }...</p>
+     <p>You might like the music of ${ responseJson.Similar.Results[0].Name }.</p><h3>Description</h2>
+     <p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }"><h3>Wiki</h3></a></p></li>`);
     $('#js-results1').removeClass('hidden');              
   }
 
   else {
-    $('#js-results-list1').append(`<li><h2>RECOMMENDATION</h2><p>If you like ${ responseJson.Similar.Info[0].Name }...</p><p>You might like the movie ${ responseJson.Similar.Results[0].Name }</p><h3>Description</h3><p>${ responseJson.Similar.Results[0].wTeaser }
-     </p><p><a href="${ responseJson.Similar.Results[0].wUrl }"><h3>Wiki</h3></a></p></li>`);
+    $('#js-results-list1').append(`<li><h2>RECOMMENDATION</h2><p>If you like ${ responseJson.Similar.Info[0].Name }...</p>
+     <p>You might like the movie ${ responseJson.Similar.Results[0].Name }</p><h3>Description</h3>
+     <p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }"><h3>Wiki</h3></a></p></li>`);
     $('#js-results1').removeClass('hidden');              
   }
 }
 
-function tasteDiveApiFetch(url,options) {
+function tasteDiveApiFetch(url, options) {
   console.log('fetch ran');
   load();
     
-  fetch(url,options)
+  fetch(url, options)
     .then (response => {
       if (response.ok) {
         return response.json(); 
@@ -119,7 +125,7 @@ function formatQueryParams(obj) {
   return queryString.join('&');
 }
 
-function getTasteDiveResults(query,media) {
+function getTasteDiveResults(query, media) {
   console.log(media);
   const tasteDiveparams = {
     q: query,
@@ -131,7 +137,7 @@ function getTasteDiveResults(query,media) {
     
   const tasteDiveQueryString = formatQueryParams(tasteDiveparams);
   const tasteDiveUrl = herokuUrl + tasteDiveBaseUrl + '?' + tasteDiveQueryString;
-  console.log('this is the tastedive URL',tasteDiveUrl);
+  console.log('this is the tastedive URL', tasteDiveUrl);
 
   const tasteDiveOptions = {
     headers: new Headers({
@@ -139,7 +145,7 @@ function getTasteDiveResults(query,media) {
     })                        
   };
     
-  tasteDiveApiFetch(tasteDiveUrl,tasteDiveOptions);
+  tasteDiveApiFetch(tasteDiveUrl, tasteDiveOptions);
 }
 
 function watchForm() {
@@ -151,7 +157,7 @@ function watchForm() {
     const searchTerm = $('#js-search-term').val();
       
     $("form").trigger("reset");
-    getTasteDiveResults(searchTerm,mediaType);
+    getTasteDiveResults(searchTerm, mediaType);
     })
 }
 
@@ -175,7 +181,7 @@ function setPlaceholder(mediaType) {
 
 function getMediaType() {
   console.log(`loading getMediaType`);
-  $("#js-start").on('click','input[type="button"]',function(event) {
+  $("#js-start").on('click', 'input[type="button"]', function(event) {
         $(event.currentTarget).toggleClass("select");
         $('.js-tab').not(event.currentTarget).removeClass('select').addClass('unselect');
         mediaType = event.currentTarget.id;
@@ -185,19 +191,19 @@ function getMediaType() {
 
 function load() {
   const loader = $('.loader');
-  loader.css('opacity','1');
+  loader.css('opacity', '1');
   loader.removeClass('hidden');
 }
 
 function complete() {
   const loader = $('.loader');
-  loader.css('opacity','0')
+  loader.css('opacity', '0')
   loader.addClass('hidden');
 }
 
 function scroll() {
   $('.scrollWrapper').click(function() {
-    $('html,body').animate({ scrollTop: 0 },1000);
+    $('html, body').animate({ scrollTop: 0 }, 1000);
   })
 }
 
