@@ -1,4 +1,4 @@
-# TasteFinder Application 
+# 'TasteFinder' Application 
 
 
 ### Screenshots 
