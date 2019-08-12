@@ -1,24 +1,20 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
-
-    font-family: 'Oswald',sans-serif;
-    margin: 0 auto;
-    background-color: grey;
-    
+body {
+  font-family: 'Oswald',sans-serif;
+  margin: 0 auto;
+  background-color: grey;  
 }
 
-
-.scrollWrapper{
+.scrollWrapper {
   padding: 25px;
   margin: 50px;
   position: relative;
 }
 
-
-.scrollToTop{
+.scrollToTop {
   border-radius: 50%;
   position: absolute;
   z-index: 99;
@@ -34,10 +30,11 @@ body{
   background-color: turquoise;
 }
 
-.fa.fa-arrow-up{
+.fa.fa-arrow-up {
   position: relative;
   top: 27.5%;
 }
+
 .scrollToTop:hover {
   background-color: #555; /* Add a dark-grey background on hover */
   transition: background-color .5s linear;
@@ -48,7 +45,7 @@ body{
   transition: background-color .5s linear;
 }
 
-.loader{     /*shout-out to Traversy Media for the tutorial on this loader image*/
+.loader {     /*shout-out to Traversy Media for the tutorial on this loader image*/
   opacity: 0;
   height: 50px;
   width: 50px;
@@ -58,7 +55,7 @@ body{
   animation: rotate 3s linear infinite;
 }
 
-.circle{
+.circle {
   background-color: turquoise;
   display: inline-block;
   height: 40px;
@@ -69,37 +66,36 @@ body{
   margin: -10px;
 }
 
-.circle:nth-child(2){
+.circle:nth-child(2) {
   background-color: pink;
   animation-delay: 0.75s;
-  }
-
-@keyframes rotate {
-  to{
-    transform: rotate(360deg);
-  }
-
 }
 
-@keyframes grow{
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
   50% {
     transform: scale(1);
   }
 }
 
 
-.tastefinder{
+.tastefinder {
   font-family: 'Lobster', cursive;
   font-size: 28px;
 }
 
 
-.logo{
+.logo {
   display:inline-block;
 }
 
 
-#start-container{
+#start-container {
   margin: 0 auto;
   width: 90%;
 }
@@ -108,47 +104,43 @@ body{
 
 section {
   width: 100%;
-
 }
 
 
 ul {
   list-style: none;
-
 }
 
-ul.searchBar{
-    display: flex;
-    padding: 0;
-    margin-bottom: 0;
-    height: 70px;
-
+ul.searchBar {
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  height: 70px;
 }
 
-.round-left{
+.round-left {
   border-radius: 10px 0px 0px 0px;
 }
 
-.round-right{
+.round-right {
   border-radius: 0px 10px 0px 0px;
 }
 
 
-#js-form{
+#js-form {
   display: flex;
 }
 
-input{
+input {
   font-size: 28px;
   width: 70%;
   padding: 20px;
   margin: 0;
   height: 80px;
   border: none;
-  
 }
 
-#submitButton{
+#submitButton {
   height: 80px;
   width: 30%;
   color: white;
@@ -156,8 +148,6 @@ input{
   font-size: 18px;
   text-transform: uppercase;
   background-color: turquoise;
-
-
 }
 
 #submitButton:hover {
@@ -165,14 +155,12 @@ input{
    transition: background-color .5s linear;
 }
 
-.tabs{
+.tabs {
   width: 20%;
   margin-left: 0;
 }
 
-
-
-input[type="button"]{
+input[type="button"] {
   height: 100%;
   width: 100%;
   padding: 0;
@@ -180,65 +168,62 @@ input[type="button"]{
   border: none;
 }
 
-
- input[type="button"]:hover,:focus{
+ input[type="button"]:hover,:focus {
   background-color: white;
   transition: background-color .75s linear;
 }
 
-.unselect{
+.unselect {
   background-color: rgb(221,221,221);
   transition: background-color .5s linear;
 }
 
-.select{
+.select {
   background-color: white;
-
 }
 
-.js-tab{
+.js-tab {
   font-family: 'Oswald', sans-serif;
 }
 
-.container{
+.container {
    max-width: 90%;
    margin: 0 auto;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-.js-instruction{
+.js-instruction {
     text-align: center;
 }
 
-#js-form{
+#js-form {
     text-align: center;
 }
 
 
-.error-message{
+.error-message {
     color: red;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-#js-resultsContainer{
-    
+#js-resultsContainer {
     margin: 0 auto;
     width:90%;
 }
 
 
-#js-start{
+#js-start {
     text-align: center;
 }
 
 
-.videowrapper{
+.videowrapper {
   position: relative;
   border: 5px solid turquoise;
   padding-bottom: 56.25%;
@@ -246,7 +231,7 @@ h1{
   height: 0px;
 }
 
-.videowrapper iframe{
+.videowrapper iframe {
   position: absolute;
   left: 0px;
   right: 0px;
