@@ -106,14 +106,17 @@ function tasteDiveApiFetch(url, options) {
       if (response.ok) {
         return response.json(); 
       }
-      throw new Error (response.statusText);       
+      throw new Error (response.statusText);
+      complete(); $('#js-results1, #js-results2, .scrollWrapper').addClass('hidden');    
     })
     .then (responseJson => displayTasteDiveResults(responseJson))
     .catch (err => {
       $('#js-error').removeClass('hidden')
         if (`${ err.message } === Cannot read property 'Name' of undefined`) {
-          $('#js-error').text(`That input doesn't exist. Please try again!`); }
-        else { (`Something went wrong: ${ err.message }`); }
+          $('#js-error').text(`That input doesn't exist. Check your spelling and try again!`); 
+          complete(); $('#js-results1, #js-results2, .scrollWrapper').addClass('hidden');}
+        else { (`Something went wrong: ${ err.message }`); complete(); 
+               $('#js-results1, #js-results2, .scrollWrapper').addClass('hidden'); }
     });
 }
 
@@ -155,8 +158,9 @@ function watchForm() {
       
     $('#js-error').addClass('hidden');
     const searchTerm = $('#js-search-term').val();
-      
+    $('#js-search-term').click(function(event) {
     $("form").trigger("reset");
+   })  
     getTasteDiveResults(searchTerm, mediaType);
     })
 }
