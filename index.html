@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewpot" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta title="TasteFinder Media Recommendation Application">
     <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster|Oswald|Roboto&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
@@ -14,36 +15,36 @@
 </head>
 
 <body>
-  <main role="main" class="main ">
+  <main class="main">
     <div id='start-container'>
             <section id="js-start">
                 <h2>Explore Your Taste</h2>
                 <h3>With</h3>
-                <h1 class="tastefinder">TasteFinder</h1><img src ="tasteyFinder.jpg">
+                <h1 class="tastefinder">TasteFinder</h1><img src ="tasteyFinder.jpg" alt="Taste Finder original logo">
                 <nav>
                   <ul class="searchBar">
                     <li class="tabs"><input type="button" class="js-tab select round-left" id="NULL"  value="Anything"></li>
                     <li class="tabs"><input type="button" id="books" class="js-tab unselect" value="Books"></li>
                     <li class="tabs"><input type="button" id="authors" value="Authors" class="js-tab unselect"></li>
-                    <li class="tabs"><input type="button" class="js-tab unselect"id="movies"value="Movies"></li>
-                    <li class="tabs"><input type="button" class="js-tab unselect round-right" id="music"value="Music"></li>
+                    <li class="tabs"><input type="button" class="js-tab unselect" id="movies" value="Movies"></li>
+                    <li class="tabs"><input type="button" class="js-tab unselect round-right" id="music" value="Music"></li>
                 </ul>
               </nav>
               <form id="js-form">
-                 <input type="search" id="js-search-term"placeholder="Select a tab and enter your search to begin!">
+                 <input type="search" id="js-search-term" placeholder="Select a tab and enter your search to begin!">
                  <button type="submit" id="submitButton">Recommend</button>
               </form>
             </section>
     </div>
     <div id="js-resultsContainer">
             <p id="js-error" class="error-message"></p>
-            <section id="js-results1" class="hidden">
+            <div id="js-results1" class="hidden">
             <ul id="js-results-list1"></ul>
-            </section>
+            </div>
   
-            <section id="js-results2" class="hidden">
+            <div id="js-results2" class="hidden">
                 <ul id="js-results-list2"></ul>
-            </section> 
+            </div> 
     </div>
     <div class="loader hidden"><div class="circle"></div><div class="circle"></div></div>
     
