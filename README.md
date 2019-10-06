@@ -23,6 +23,7 @@ One thing I really tried hard to accomplish with Taste Finder was to maintain a 
 
 ![early tastefinder app](screenshots/TasteFinderInfant.jpg.png?raw=true "Early TasteFinder")
 
-
+## Technologies
+CSS, HTML, Javascript, jQuery
 
 ## [Check out my live page!](https://traviswhittington88.github.io/tastefinder/)
