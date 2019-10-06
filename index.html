@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta name="viewpot" content="width=device-width,initial-scale=1.0">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>"TasteFinder Recommendation Application"</title>
       <link rel="stylesheet" href="main.css">
@@ -21,19 +21,23 @@
             <h1>With</h1>
             <h1 class="app-name">TasteFinder</h1>
             <img src ="tasteyFinder.jpg" alt="Taste Finder original logo">
-            <nav>
-               <ul class="searchBar">
-                  <li class="tabs"><input type="button" class="js-tab select round-left anything" id="NULL" value="Anything" autofocus></li>
-                  <li class="tabs"><input type="button" id="books" class="js-tab unselect" value="Books"></li>
-                  <li class="tabs"><input type="button" id="authors" value="Authors" class="js-tab unselect"></li>
-                  <li class="tabs"><input type="button" class="js-tab unselect" id="movies" value="Movies"></li>
-                  <li class="tabs"><input type="button" class="js-tab unselect round-right" id="music" value="Music"></li>
-               </ul>
-            </nav>
-            <form id="js-form">
-               <input type="search" id="js-search-term" placeholder="Enter a book, author, movie or band!" required>
-               <button type="submit" id="submitButton">Recommend</button>
-            </form>
+      <div class='searchArea'>
+         <nav class="navBar">
+            <ul class="searchBar">
+              <li class="tabs"><input type="button" class="anything-tab js-tab select round-left anything" id="NULL" value="Anything" autofocus></li>
+              <li class="tabs"><input type="button" id="books" class="js-tab unselect" value="Books"></li>
+              <li class="tabs"><input type="button" id="authors" value="Authors" class="js-tab unselect"></li>
+              <li class="tabs"><input type="button" class="js-tab unselect" id="movies" value="Movies"></li>
+              <li class="tabs"><input type="button" class="js-tab unselect round-right music-tab" id="music" value="Music"></li>
+            </ul>
+         </nav>
+         <form id="js-form">
+            <input type="search" id="js-search-term" placeholder="Book/Author/Movie/Music" required>
+            <button type="submit" id="submitButton">Recommend</button>
+         </form> 
+      </div>   
+         
+         
          </section>
          <section class="results-section">
             <p class=" js-error error-message"></p>

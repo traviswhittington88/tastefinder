@@ -14,8 +14,8 @@ function displayYoutubeResults(responseJson) {
 
   for (let i = 0; i < responseJson.items.length; i++) {
     $('.js-results-list2').append(
-      `<li><h3>${ responseJson.items[i].snippet.title }</h3>
-       <p>${ responseJson.items[i].snippet.description }</p><div class="videowrapper">
+      `<li><h3 class='vidTitle'>${ responseJson.items[i].snippet.title }</h3>
+       <div class="videowrapper">
        <iframe src="https://www.youtube.com/embed/${ responseJson.items[i].id.videoId }?rel=0" 
        frameborder="0" allowfullscreen></iframe></div>
        </li>`)
@@ -64,31 +64,33 @@ function displayTasteDiveResults(responseJson) {
 
   if (responseJson.Similar.Results[0].Type === 'book') {
     $('.js-results-list1').append(`<li><h1>RECOMMENDATION</h1><p>If you like ${ responseJson.Similar.Info[0].Name }...
-     </p><p>You might like the book ${ responseJson.Similar.Results[0].Name }.</p><h3>Description</h2>
-     <p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }" target="_blank" alt="wiki link">
-     <h3>Wiki</h3></a></p></li>`);
+     </p><p>You might like the book ${ responseJson.Similar.Results[0].Name }.</p><h1>DESCRIPTION</h1>
+     <p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }" class='wikiLink' target="_blank" alt="wiki link">
+     <h2 class='wiki'>WIKI</h2></a></p></li>`);
     $('.js-results1').removeClass('hidden');              
   }
 
   else if (responseJson.Similar.Results[0].Type === 'author') {
     $('.js-results-list1').append(`<li><h1>RECOMMENDATION</h1><p>If you like ${ responseJson.Similar.Info[0].Name }...</p>
-     <p>You might like the author ${ responseJson.Similar.Results[0].Name }.</p><h3>Description</h2>
-     <p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }" target="_blank" alt="wiki link">
-     <h3>Wiki</h3></a></p></li>`);
+     <p>You might like the author ${ responseJson.Similar.Results[0].Name }.</p><h1>DESCRIPTION</h1>
+     <p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }" class='wikiLink' target="_blank" alt="wiki link">
+     <h2 class='wiki'>WIKI</h2></a></p></li>`);
     $('.js-results1').removeClass('hidden');              
   }
 
   else if (responseJson.Similar.Results[0].Type === 'music') {
     $('.js-results-list1').append(`<li><h1>RECOMMENDATION</h1><p>If you like ${ responseJson.Similar.Info[0].Name }...</p>
-     <p>You might like the music of ${ responseJson.Similar.Results[0].Name }.</p><h3>Description</h2>
-     <p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }" target="_blank" alt="wiki link"><h3>Wiki</h3></a></p></li>`);
+     <p>You might like the music of ${ responseJson.Similar.Results[0].Name }.</p><h1>DESCRIPTION</h1>
+     <p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }" class='wikiLink' target="_blank" alt="wiki link">
+     <h2 class='wiki'>WIKI</h2></a></p></li>`);
     $('.js-results1').removeClass('hidden');              
   }
 
   else {
     $('.js-results-list1').append(`<li><h1>RECOMMENDATION</h1><p>If you like ${ responseJson.Similar.Info[0].Name }...</p>
-     <p>You might like the movie ${ responseJson.Similar.Results[0].Name }</p><h3>Description</h3>
-     <p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }" target="_blank" alt="wiki link"><h3>Wiki</h3></a></p></li>`);
+     <p>You might like the movie ${ responseJson.Similar.Results[0].Name }</p><h1>DESCRIPTION</h1>
+     <p>${ responseJson.Similar.Results[0].wTeaser }</p><p><a href="${ responseJson.Similar.Results[0].wUrl }" class='wikiLink' target="_blank" alt="wiki link">
+     <h2 class='wiki'>WIKI</h2></a></p></li>`);
     $('.js-results1').removeClass('hidden');              
   }
 }
@@ -163,13 +165,13 @@ function setPlaceholder(mediaType) {
     $("#js-search-term").attr('placeholder', 'Enter A Favorite Book');
   }
   else if (mediaType === "NULL") {
-    $("#js-search-term").attr('placeholder', 'Enter a book, author, movie or band to get started!');
+    $("#js-search-term").attr('placeholder', 'Book/Author/Movie/Music');
   }
   else if (mediaType === 'authors') {
-    $('#js-search-term').attr('placeholder','How bout your favorite author?');
+    $('#js-search-term').attr('placeholder','Your favorite author?');
   }
   else if (mediaType ==='movies') {
-    $("#js-search-term").attr('placeholder',"e.g.'Pulp Fiction'");
+    $("#js-search-term").attr('placeholder',"Pulp Fiction");
   }
   else {
     $("#js-search-term").attr('placeholder','Pink Floyd');
