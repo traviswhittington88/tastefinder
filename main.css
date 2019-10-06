@@ -1,13 +1,183 @@
+
+/****Globals****/
+
 * {
     box-sizing: border-box;
 }
 
 body {
   font-family: 'Oswald',sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   margin: 0 auto;
-  background-color: grey;  
+  background-color: grey;
 }
+
+h1 {
+  text-align: center;
+}
+
+input {
+  font-size: 28px;
+  width: 70%;
+  padding: 20px;
+  margin: 0;
+  height: 80px;
+  border: none;
+}
+
+section {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/****Typography****/
+
+.app-name {
+  font-family: 'Lobster', cursive;
+  font-size: 44px;
+}
+
+.logo {
+  display:inline-block;
+}
+
+ul.searchBar {
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  height: 70px;
+}
+
+.round-left {
+  border-radius: 10px 0px 0px 0px;
+}
+
+.round-right {
+  border-radius: 0px 10px 0px 0px;
+}
+
+#js-form {
+  display: flex;
+}
+
+.results-section {
+  background-image: linear-gradient(grey,lightgrey);
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.js-results-list1, 
+.js-results-list2 {
+  margin: 0 auto;
+  padding: 0;
+}
+
+#submitButton {
+  height: 80px;
+  width: 30%;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  text-transform: uppercase;
+  background-color: turquoise;
+}
+
+#submitButton:hover {
+   background-color: rgb(54, 167, 155);
+   transition: background-color .5s linear;
+}
+
+.tabs {
+  width: 20%;
+  margin-left: 0;
+}
+
+.js-tab {
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+
+input[type="button"] {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+ input[type="button"]:hover,:focus {
+  background-color: white;
+  transition: background-color .75s linear;
+}
+
+.unselect {
+  background-color: rgb(221,221,221);
+  transition: background-color .5s linear;
+}
+
+.select {
+  background-color: white;
+}
+
+.container {
+   max-width: 90%;
+   margin: 0 auto;
+}
+
+.js-instruction {
+    text-align: center;
+}
+
+#js-form {
+    text-align: center;
+}
+
+
+.error-message {
+    font-size: 44px;
+}
+
+.hidden {
+    display: none;
+}
+
+.js-results-list2 {
+  text-align: center;
+}
+
+.js-start {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+  }
+
+.videowrapper {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 500px;
+  padding-top: 25px;
+  height: 0px;
+  max-width: 1000px;
+  max-height: 500px;
+}
+
+.videowrapper iframe {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top:0px;
+  bottom:0px;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 500px;
+}
+
+/*Animations*/
 
 .scrollWrapper {
   padding: 25px;
@@ -33,7 +203,7 @@ body {
 
 .fa.fa-arrow-up {
   position: relative;
-  top: 27.5%;
+  top: 10px;
 }
 
 .scrollToTop:hover {
@@ -84,162 +254,8 @@ body {
   }
 }
 
+/****Queries****/
 
-.tastefinder {
-  font-family: 'Lobster', cursive;
-  font-size: 28px;
+@media screen and (max-width: 320px) {
+  
 }
-
-
-.logo {
-  display:inline-block;
-}
-
-
-#start-container {
-  margin: 0 auto;
-  width: 90%;
-}
-
-
-
-section {
-  width: 100%;
-}
-
-
-ul {
-  list-style: none;
-}
-
-ul.searchBar {
-  display: flex;
-  padding: 0;
-  margin-bottom: 0;
-  height: 70px;
-}
-
-.round-left {
-  border-radius: 10px 0px 0px 0px;
-}
-
-.round-right {
-  border-radius: 0px 10px 0px 0px;
-}
-
-
-#js-form {
-  display: flex;
-}
-
-input {
-  font-size: 28px;
-  width: 70%;
-  padding: 20px;
-  margin: 0;
-  height: 80px;
-  border: none;
-}
-
-#submitButton {
-  height: 80px;
-  width: 30%;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  text-transform: uppercase;
-  background-color: turquoise;
-}
-
-#submitButton:hover {
-   background-color: rgb(54, 167, 155);
-   transition: background-color .5s linear;
-}
-
-.tabs {
-  width: 20%;
-  margin-left: 0;
-}
-
-input[type="button"] {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-
- input[type="button"]:hover,:focus {
-  background-color: white;
-  transition: background-color .75s linear;
-}
-
-.unselect {
-  background-color: rgb(221,221,221);
-  transition: background-color .5s linear;
-}
-
-.select {
-  background-color: white;
-}
-
-.js-tab {
-  font-family: 'Oswald', sans-serif;
-}
-
-.container {
-   max-width: 90%;
-   margin: 0 auto;
-}
-
-h1 {
-    text-align: center;
-}
-
-.js-instruction {
-    text-align: center;
-}
-
-#js-form {
-    text-align: center;
-}
-
-
-.error-message {
-    color: red;
-}
-
-.hidden {
-    display: none;
-}
-
-#js-resultsContainer {
-    margin: 0 auto;
-    width:90%;
-}
-
-
-#js-start {
-    text-align: center;
-}
-
-
-.videowrapper {
-  position: relative;
-  border: 5px solid turquoise;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0px;
-}
-
-.videowrapper iframe {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top:0px;
-  bottom:0px;
-  width: 100%;
-  height: 100%;
-}
-
-/*comment to flag white-space changes made*/
