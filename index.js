@@ -111,7 +111,7 @@ function tasteDiveApiFetch(url, options) {
     .catch (err => {
       let errMsg = err.message
       if(errMsg.includes("of undefined")) {
-        $('.js-error').removeClass('hidden').text(`Oops, that input doesn't exist, check your spelling and try agagin!`); complete(); 
+        $('.js-error').removeClass('hidden').text(`Oops, that input doesn't exist, check your spelling and try again!`); complete(); 
                $('.js-results1, .js-results2, .scrollWrapper').addClass('hidden');}
       else {
         $('.js-error').removeClass('hidden').text(`Something went wrong: ${ err.message }`); complete(); 
